@@ -10,6 +10,7 @@ public class PauseGame : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -19,11 +20,13 @@ public class PauseGame : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape) && !menuIsOpen)
         {
             pauseMenu.SetActive(true);
+            Time.timeScale = 0;
             menuIsOpen = true;
         }
         else if (Input.GetKeyUp(KeyCode.Escape) && menuIsOpen)
         {
             pauseMenu.SetActive(false);
+            Time.timeScale = 1;
             menuIsOpen = false;
         }
     }

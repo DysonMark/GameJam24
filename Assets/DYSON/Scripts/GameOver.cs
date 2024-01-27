@@ -1,27 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-
-    public int maxHealth = 100;
-    public int currentHealth;
+    [SerializeField] public GameObject gameOverScreen;
+    int sceneIndex;
+    bool menuIsOpen = false;
 
     void Start()
     {
-        currentHealth = maxHealth;   
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Update()
     {
-        if (currentHealth <= 0)
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            GameIsOver(currentHealth);
+            gameOverScreen.SetActive(true);
         }
     }
-    public void GameIsOver(int currentHealth)
+    public void GameIsOver()
     {
+        gameObject.SetActive(true);
+    }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(sceneIndex);
+        gameObject.SetActive(false);
+    }
+
+    public void GoBackToMenu()
+    {
+        SceneManager.LoadScene(0);
 
     }
 }
