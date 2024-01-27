@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DYSON/Scenes/Future.unity
     guid: afa7f831da1014840b3182770f5ec76b
+  - enabled: 1
+    path: Assets/DYSON/Scenes/Level_1970.unity
+    guid: 7ad4e82172c0e0642904abc37b8920dd
   m_configObjects: {}

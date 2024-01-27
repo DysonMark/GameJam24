@@ -19,5 +19,10 @@ public class Portals : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene(3);
         }
+        else if (other.tag == "Player" && tag == "NewPortal")
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(4); 
+        }
     }
 }
