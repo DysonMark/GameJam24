@@ -22,6 +22,7 @@ public class GameOver : MonoBehaviour
             gameOverScreen.SetActive(true);
         }
     }
+
     public void GameIsOver()
     {
         gameObject.SetActive(true);
