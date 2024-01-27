@@ -10,10 +10,17 @@ TagManager:
   - Log
   - LogCheck
   - Car
+  - DanceOrder
+  - Spike
   - CarCheck
+<<<<<<< Updated upstream
   - CButton
   - ZButton
   - XButton
+=======
+  - Lava
+  - NewPortal
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
