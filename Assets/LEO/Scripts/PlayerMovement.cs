@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public Transform groundCheck;      // Reference to a game object which stores the coordinates of the lowest point of the player's sprite
     [SerializeField] public float groundCheckRadius;    // Radius of the gizmo which will check if the player is standing on an object
     [SerializeField] public LayerMask whatIsGround;     // Layers of objects in which the player can stand on
+    [SerializeField] public bool canJump = false;
     [SerializeField] public float jumpForce = 1000f;
     private bool isTouchingGround;                      // Parameter to check if the player is standing on an object
     private Rigidbody2D player;
@@ -33,13 +34,15 @@ public class PlayerMovement : MonoBehaviour
 
 
         //      Jumping code
-        //isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);  // Checks if the player is touching the ground
-
-        if (Input.GetButtonDown("Jump") && isTouchingGround)
+        if (canJump)
         {
-            player.velocity = new Vector2(player.velocity.x, jumpForce);
-        }
+            isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);  // Checks if the player is touching the ground
 
+            if (Input.GetButtonDown("Jump") && isTouchingGround)
+            {
+                player.velocity = new Vector2(player.velocity.x, jumpForce);
+            }
+        }
 
         //      Crouching code
         if (Input.GetKeyDown(KeyCode.LeftControl))
