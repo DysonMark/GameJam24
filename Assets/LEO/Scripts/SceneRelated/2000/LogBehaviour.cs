@@ -10,6 +10,7 @@ public class LogBehaviour : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] GameObject explosionPrefab;
     [SerializeField] GameObject gameOverScreen;
+    [SerializeField] LogCheck logCheck;
 
     void Start()
     {
@@ -30,6 +31,11 @@ public class LogBehaviour : MonoBehaviour
             gameOverScreen.SetActive(true);
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("LogCheck"))
+        {
+            logCheck.logCount++;
+            Debug.Log("A log has left");
         }
     }
 }
