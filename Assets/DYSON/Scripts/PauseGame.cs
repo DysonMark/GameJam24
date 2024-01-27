@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseGame : MonoBehaviour
 {
     int sceneIndex;
+    bool menuIsOpen = false;
 
     private void Start()
     {
@@ -15,10 +16,15 @@ public class PauseGame : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && !menuIsOpen)
         {
-            Debug.Log("Escape key was pressed");
             pauseMenu.SetActive(true);
+            menuIsOpen = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Escape) && menuIsOpen)
+        {
+            pauseMenu.SetActive(false);
+            menuIsOpen = false;
         }
     }
 
