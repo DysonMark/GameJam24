@@ -7,12 +7,15 @@ public class RedLightGreenLightManager : MonoBehaviour
     [SerializeField] Animator lookGuyAnimator;
     public bool isLooking = false;
     int lookingInterval;
+    GameObject playerGO;
+    [SerializeField] GameObject explotionPrefab;
+    [SerializeField] GameObject gameOverScreen;
 
     float timePassed;
 
     private void Start()
     {
-        lookingInterval = Random.Range(3, 10);
+        lookingInterval = Random.Range(5, 10);
     }
 
     void Update()
@@ -21,9 +24,17 @@ public class RedLightGreenLightManager : MonoBehaviour
         if (timePassed > lookingInterval)
         {
             StartCoroutine(LookingSequence());
+            lookingInterval = Random.Range(8, 12);
             timePassed = 0;
         }
-        if (Input.GetButton(KeyCode.A)) || (Input.GetButton(KeyCode.A)) || (Input.GetButton(KeyCode.A)) ||)
+        if (Input.GetKey(KeyCode.A) && isLooking || Input.GetKey(KeyCode.D) && isLooking)
+        {
+            playerGO = GameObject.FindGameObjectWithTag("Player");
+            Destroy(playerGO);
+            Instantiate(explotionPrefab, playerGO.transform.position, Quaternion.identity);
+            Instantiate(gameOverScreen, Vector2.zero, Quaternion.identity);
+            
+        }
     }
 
     IEnumerator LookingSequence()
@@ -31,9 +42,8 @@ public class RedLightGreenLightManager : MonoBehaviour
         lookGuyAnimator.SetBool("isLooking", true);
         yield return new WaitForSeconds(1.5f);
         isLooking = true;
-        yield return new WaitForSeconds(Random.Range(3 ,10));
+        yield return new WaitForSeconds(Random.Range(3 ,5));
         isLooking = false;
-        lookGuyAnimator.SetBool("isLooking", false);
-        lookingInterval = Random.Range(3, 10);
+        lookGuyAnimator.SetBool("isLooking", isLooking);
     }
 }
