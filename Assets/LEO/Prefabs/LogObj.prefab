@@ -135,6 +135,7 @@ MonoBehaviour:
   logHorizontalSpeed: -5
   logVis: {fileID: 7377960959412131475}
   explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  gameOverScreen: {fileID: 0}
 --- !u!50 &7377960959781974510
 Rigidbody2D:
   serializedVersion: 4

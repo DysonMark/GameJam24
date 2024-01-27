@@ -9,7 +9,7 @@ public class LogBehaviour : MonoBehaviour
     [SerializeField] GameObject logVis;
     Rigidbody2D rb;
     [SerializeField] GameObject explosionPrefab;
-
+    [SerializeField] GameObject gameOverScreen;
 
     void Start()
     {
@@ -27,7 +27,7 @@ public class LogBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            
+            gameOverScreen.SetActive(true);
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
