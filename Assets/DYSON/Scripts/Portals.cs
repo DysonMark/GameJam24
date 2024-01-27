@@ -17,6 +17,7 @@ public class Portals : MonoBehaviour
         else if (other.tag == "Player" && tag == "PortalFuture")
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(3);
         }
     }
 }
