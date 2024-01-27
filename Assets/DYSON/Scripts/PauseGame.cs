@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseGame : MonoBehaviour
 {
+    int sceneIndex;
+
+    private void Start()
+    {
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
 
     [SerializeField] GameObject pauseMenu;
     private void Update()
@@ -18,7 +24,7 @@ public class PauseGame : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(sceneIndex);
     }
 
     public void GoBackToMenu()
