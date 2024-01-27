@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public int maxHealth = 100;
+    public int currentHealth;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;   
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (currentHealth <= 0)
+        {
+            GameIsOver(currentHealth);
+        }
+    }
+    public void GameIsOver(int currentHealth)
+    {
+
     }
 }
