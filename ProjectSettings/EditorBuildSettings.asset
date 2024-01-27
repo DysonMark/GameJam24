@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/LEO/Scenes/Menu.unity
     guid: d006a84ec33e94d4e957a44aceaa5ca1
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/LEO/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Level_1950.unity
+    path: Assets/LEO/Scenes/Level_2010.unity
     guid: f71efc3615446884eaa3c59dddc27c46
   - enabled: 1
-    path: Assets/Scenes/Level_2010.unity
+    path: Assets/LEO/Scenes/Level_2010.unity
     guid: bbbf8a2c5b6bc50459cf74e0b2ff96fa
   m_configObjects: {}
