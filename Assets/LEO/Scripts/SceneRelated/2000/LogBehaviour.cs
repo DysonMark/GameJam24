@@ -17,7 +17,7 @@ public class LogBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         logRotationSpeed = logHorizontalSpeed * -100;
         rb.velocity = new Vector2(logHorizontalSpeed, rb.velocity.y);

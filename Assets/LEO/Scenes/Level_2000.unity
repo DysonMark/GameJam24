@@ -1524,6 +1524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GAMEOVER SCREEN
       objectReference: {fileID: 0}
+    - target: {fileID: 6346940215979747652, guid: 69a69851679080f41a0c547d64a1d7f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a69851679080f41a0c547d64a1d7f0, type: 3}
 --- !u!1001 &1544742608

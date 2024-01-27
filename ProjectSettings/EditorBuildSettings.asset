@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/LEO/Scenes/Menu.unity
     guid: d006a84ec33e94d4e957a44aceaa5ca1
   - enabled: 1
-    path: Assets/DYSON/Scenes/FirstScene.unity
+    path: Assets/DYSON/Scenes/Present.unity
     guid: 8d7bbddc16f549a4da2303b7d31670a2
   - enabled: 1
     path: Assets/LEO/Scenes/Level_2010_2.unity

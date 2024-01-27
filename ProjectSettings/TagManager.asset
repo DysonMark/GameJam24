@@ -11,6 +11,9 @@ TagManager:
   - LogCheck
   - Car
   - CarCheck
+  - CButton
+  - ZButton
+  - XButton
   layers:
   - Default
   - TransparentFX
