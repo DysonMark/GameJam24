@@ -8,9 +8,10 @@ public class Portals : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "PortalFuture")
+        if (other.tag == "Player")
         {
             Debug.Log("Im here");
+            Destroy(gameObject);    
             SceneManager.LoadScene(3);
         }
     }
