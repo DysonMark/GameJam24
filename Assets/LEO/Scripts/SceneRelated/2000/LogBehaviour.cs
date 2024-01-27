@@ -8,6 +8,7 @@ public class LogBehaviour : MonoBehaviour
     float logRotationSpeed;
     [SerializeField] GameObject logVis;
     Rigidbody2D rb;
+    [SerializeField] GameObject explosionPrefab;
 
 
     void Start()
@@ -20,5 +21,15 @@ public class LogBehaviour : MonoBehaviour
         logRotationSpeed = logHorizontalSpeed * -100;
         rb.velocity = new Vector2(logHorizontalSpeed, rb.velocity.y);
         logVis.transform.Rotate(0, 0, logRotationSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player")) 
+        {
+            
+            Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
+        }
     }
 }

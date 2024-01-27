@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7377960959781974505}
   - component: {fileID: 7377960959781974510}
   - component: {fileID: 7377960959781974507}
+  - component: {fileID: 1880019751}
   m_Layer: 0
   m_Name: LogObj
   m_TagString: Untagged
@@ -131,8 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580e993ad8f2d7b44864442f3858a856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logHorizontalSpeed: -2
+  logHorizontalSpeed: -5
   logVis: {fileID: 7377960959412131475}
+  explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
 --- !u!50 &7377960959781974510
 Rigidbody2D:
   serializedVersion: 4
@@ -169,4 +171,20 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.50527775
+--- !u!58 &1880019751
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377960959781974511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4771248

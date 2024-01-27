@@ -253,9 +253,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.100000024, y: -0.5230496}
+  m_Offset: {x: 0.003440261, y: -0.37605536}
   serializedVersion: 2
-  m_Radius: 0.3224752
+  m_Radius: 0.44950736
 --- !u!114 &451695609027094648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +275,6 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   jumpForce: 15
   canJump: 1
