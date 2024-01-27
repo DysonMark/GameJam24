@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LEO/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/LEO/Scenes/Level_2010.unity
+  - enabled: 0
+    path: Assets/LEO/Scenes/Level_1950.unity
     guid: f71efc3615446884eaa3c59dddc27c46
-  - enabled: 1
+  - enabled: 0
     path: Assets/LEO/Scenes/Level_2010.unity
     guid: bbbf8a2c5b6bc50459cf74e0b2ff96fa
+  - enabled: 1
+    path: Assets/DYSON/Scenes/FirstScene.unity
+    guid: 257f477eac03bd746aa968334ec1b14f
+  - enabled: 1
+    path: Assets/LEO/Scenes/Level_2010_2.unity
+    guid: 99bde3d72f1ebd342a709efb8aa61993
   m_configObjects: {}
