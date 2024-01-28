@@ -28,7 +28,7 @@ public class LogBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            gameOverScreen.SetActive(true);
+            Instantiate(gameOverScreen, Vector2.zero, Quaternion.identity);
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
