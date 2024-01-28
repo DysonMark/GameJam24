@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 524136512939413769, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
       propertyPath: m_Name
-      value: GameOverCanvas Variant
+      value: GameOverCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3143695477171764888, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
       propertyPath: m_RootOrder
@@ -54,10 +54,6 @@ PrefabInstance:
     - target: {fileID: 3143695477171764888, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7717769534634130085, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
