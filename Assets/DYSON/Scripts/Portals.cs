@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Portals : MonoBehaviour
 {
-    int currentScene;
-    private void Start()
-    {
-        currentScene = SceneManager.GetActiveScene().buildIndex;
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player" && tag == "PortalPast")
@@ -21,13 +16,13 @@ public class Portals : MonoBehaviour
         }
         else if (other.tag == "Player" && tag == "PortalFuture")
         {
-            Destroy(gameObject);
             SceneManager.LoadScene(1);
+            Destroy(gameObject);
         }
         else if (other.tag == "Player" && tag == "NewPortal")
         {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
             Destroy(gameObject);
-            SceneManager.LoadScene(currentScene + 1); 
         }
     }
 }
