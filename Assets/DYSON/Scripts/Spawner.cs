@@ -6,6 +6,7 @@ using UnityEngine.VFX;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstaclesPrefabs;
+    private Animator animator;
     public float obstacleSpawnTime = 2f;
     public float obstacleSpeed = 1f;
     private float timeUntilObstacleSpawn;
@@ -22,7 +23,7 @@ public class Spawner : MonoBehaviour
         if (timeUntilObstacleSpawn > obstacleSpawnTime)
         {
             Spawn();
-            timeUntilObstacleSpawn = 0f;
+            timeUntilObstacleSpawn = -0.5f;
         }
     }
 

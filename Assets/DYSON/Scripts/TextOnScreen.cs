@@ -6,42 +6,40 @@ using UnityEngine;
 
 public class TextOnScreen : MonoBehaviour
 {
-    //public GameObject danceOrder;
+    public GameObject Ouga;
+    public GameObject goodAnswer;
    // public GameObject firstOrder;
-    public TextMeshProUGUI danceOrder;
-    public TextMeshProUGUI firstOrder;
-    public GameObject danceObject;
-    public GameObject firstOrderObject;
-    public GameObject triangle;
+    public TextMeshProUGUI talking;
+    //public TextMeshProUGUI firstOrder;
+    //public GameObject danceObject;
+    //public GameObject firstOrderObject;
+    //public GameObject triangle;
 
     private void Start()
     {
-        danceOrder.enabled = false;
-        firstOrder.enabled = true;
-        danceObject.SetActive(false);
-        firstOrderObject.SetActive(true);
+        //danceOrder.enabled = false;
+        //firstOrder.enabled = true;
+        //danceObject.SetActive(false);
+        //firstOrderObject.SetActive(true);
+        Ouga.SetActive(false);
+        goodAnswer.SetActive(false);
+        talking.enabled = false;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player" && tag == "DanceOrder")
+        if (other.tag == "Player" && tag == "Philosophy")
         {
-            firstOrderObject.SetActive(false);
-            firstOrder.enabled = false;
-            danceObject.SetActive(true);
-            danceOrder.enabled = true;
-        }
-        else
-        {
-            firstOrderObject.SetActive(true);
-            firstOrder.enabled = true;
-            danceObject.SetActive(false);
-            danceOrder.enabled = false;
+            talking.enabled = true;
+            Ouga.SetActive(true);
+            goodAnswer.SetActive(true);
+            Debug.Log("In");
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        danceOrder.enabled = false;
-        firstOrder.enabled = true;
+        talking.enabled = false;
+        goodAnswer.SetActive(false);
+        Ouga?.SetActive(false);
     }
 }
