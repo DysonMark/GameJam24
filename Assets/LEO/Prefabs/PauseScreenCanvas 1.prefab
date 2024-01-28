@@ -638,7 +638,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2799569221167186614}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
         m_MethodName: GoBackToMenu
         m_Mode: 1
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2799569221167186614}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
         m_MethodName: PlayGame
         m_Mode: 1

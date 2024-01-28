@@ -15,6 +15,7 @@ public class PauseGame : MonoBehaviour
     }
 
     [SerializeField] GameObject pauseMenu;
+
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape) && !menuIsOpen)
@@ -34,7 +35,9 @@ public class PauseGame : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(sceneIndex);
+        menuIsOpen = false;
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
     }
 
     public void GoBackToMenu()

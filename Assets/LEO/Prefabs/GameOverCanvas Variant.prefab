@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 524136512939413769, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
       propertyPath: m_Name
-      value: GameOverCanvas
+      value: GameOverCanvas Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3143695477171764888, guid: 29146199b3ff84e428db46de17cc5489, type: 3}
       propertyPath: m_RootOrder
