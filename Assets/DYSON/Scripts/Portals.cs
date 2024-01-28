@@ -12,12 +12,12 @@ public class Portals : MonoBehaviour
         {
             Debug.Log("Im here");
             Destroy(gameObject);    
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         else if (other.tag == "Player" && tag == "PortalFuture")
         {
             Destroy(gameObject);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(1);
         }
         else if (other.tag == "Player" && tag == "NewPortal")
         {
