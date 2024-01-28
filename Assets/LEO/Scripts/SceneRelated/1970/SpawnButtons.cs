@@ -14,6 +14,8 @@ public class SpawnButtons : MonoBehaviour
     float timePassed = 0f;
     float intervalsPassed;
 
+    bool isPortalOn = false;
+
     void Update()
     {
         timePassed += Time.deltaTime;
@@ -25,9 +27,10 @@ public class SpawnButtons : MonoBehaviour
                 InstantiateButtons();
                 timePassed = 0f;
             }
-            else
+            if (intervalsPassed > 10 && !isPortalOn)
             {
                 Instantiate(portal, portalPos.position, Quaternion.identity);
+                isPortalOn = true;
             }
 
         }

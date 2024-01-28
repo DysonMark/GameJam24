@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonHorizontalSpeed: -8
   explosionEffect: {fileID: 7635279033146363896, guid: 5175ec58fff7d1e4fa47b94978d5f758, type: 3}
-  gameOverScreen: {fileID: 3767755448724161256, guid: 69a69851679080f41a0c547d64a1d7f0, type: 3}
+  gameOverScreen: {fileID: 689714986636889306, guid: 4d24f2387771ce046b80c63d797ed8cd, type: 3}
   wasPressed: 0
 --- !u!58 &-3735238563475475441
 CircleCollider2D:
