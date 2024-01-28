@@ -12,8 +12,13 @@ public class LogBehaviour : MonoBehaviour
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] LogCheck logCheck;
 
+    [SerializeField] AudioClip explosionSFX;
+    AudioSource audioSource;
+
+
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -28,7 +33,8 @@ public class LogBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) 
         {
-            gameOverScreen.SetActive(true);
+            audioSource.PlayOneShot(explosionSFX);
+            Instantiate(gameOverScreen, Vector2.zero, Quaternion.identity);
             Instantiate(explosionPrefab, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
