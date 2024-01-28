@@ -95,10 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2271347114197944777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2303e9f7bc6583d4f85e3554a72d864d, type: 3}
+  m_Script: {fileID: 11500000, guid: afcd8f950d05ead4a8570633bb0280e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 3767755448724161256, guid: 69a69851679080f41a0c547d64a1d7f0, type: 3}
+  gameOverScreen: {fileID: 524136512939413769, guid: d323a648c1ad8484ca20eafe02e3baca, type: 3}
 --- !u!1 &2271347115629548971
 GameObject:
   m_ObjectHideFlags: 0

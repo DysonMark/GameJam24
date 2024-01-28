@@ -19,6 +19,7 @@ public class PauseGame : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape) && !menuIsOpen)
         {
+            Debug.Log("Enter");     
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
             menuIsOpen = true;
