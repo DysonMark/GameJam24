@@ -8,22 +8,15 @@ public class TextOnScreen : MonoBehaviour
 {
     public GameObject Ouga;
     public GameObject goodAnswer;
-   // public GameObject firstOrder;
+    public GameObject bgImage;
     public TextMeshProUGUI talking;
-    //public TextMeshProUGUI firstOrder;
-    //public GameObject danceObject;
-    //public GameObject firstOrderObject;
-    //public GameObject triangle;
 
     private void Start()
     {
-        //danceOrder.enabled = false;
-        //firstOrder.enabled = true;
-        //danceObject.SetActive(false);
-        //firstOrderObject.SetActive(true);
         Ouga.SetActive(false);
         goodAnswer.SetActive(false);
         talking.enabled = false;
+        bgImage.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,6 +25,7 @@ public class TextOnScreen : MonoBehaviour
             talking.enabled = true;
             Ouga.SetActive(true);
             goodAnswer.SetActive(true);
+            bgImage.SetActive(true);
             Debug.Log("In");
         }
     }
@@ -40,6 +34,7 @@ public class TextOnScreen : MonoBehaviour
     {
         talking.enabled = false;
         goodAnswer.SetActive(false);
-        Ouga?.SetActive(false);
+        Ouga.SetActive(false);
+        bgImage.SetActive(false);
     }
 }
