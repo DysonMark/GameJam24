@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    AudioSource audioSource;
+    [SerializeField] public AudioClip JumpSFX, ExplosionSFX;
+
     [SerializeField] public float runSpeed = 40f;       // Run speed multiplier
     [SerializeField] public Animator playerAnimator;    // Reference to the player animator
 
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         player = GetComponent<Rigidbody2D>();
     }
 
@@ -41,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump") && isTouchingGround)
             {
+                PlaySFX(JumpSFX);
                 player.velocity = new Vector2(player.velocity.x, jumpForce);
             }
         }
@@ -81,7 +86,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         characterController2D.Move(horizontalMove * Time.fixedDeltaTime, crouch, false); 
+    }
 
-
+    void PlaySFX (AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }

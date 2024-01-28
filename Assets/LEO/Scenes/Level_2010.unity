@@ -11361,9 +11361,13 @@ PrefabInstance:
       value: Player_Placeholder
       objectReference: {fileID: 0}
     - target: {fileID: 451695609027094648, guid: dd0c12e9f6c84524cbf187040557b793, type: 3}
-      propertyPath: runSpeed
-      value: 20
-      objectReference: {fileID: 0}
+      propertyPath: JumpSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 811350e32687b36418f575e59b567559, type: 3}
+    - target: {fileID: 451695609027094648, guid: dd0c12e9f6c84524cbf187040557b793, type: 3}
+      propertyPath: ExplosionSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 53f75cf6a8a827940bcd38fbe01fa3ee, type: 3}
     - target: {fileID: 451695609027094653, guid: dd0c12e9f6c84524cbf187040557b793, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -11408,10 +11412,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 451695609027094655, guid: dd0c12e9f6c84524cbf187040557b793, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 25ecff2b67ef9d34cb89c47b0947935c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd0c12e9f6c84524cbf187040557b793, type: 3}
 --- !u!1001 &1573122226
