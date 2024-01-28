@@ -5649,11 +5649,13 @@ MonoBehaviour:
   MainMenuSFX: {fileID: 8300000, guid: 42f5059ae9152674e84e1e5f140769ee, type: 3}
   ChatterInBarSFX: {fileID: 8300000, guid: f02fe825d319d1247a00f2f084dcbbd2, type: 3}
   discoSFX: {fileID: 0}
+  skateSFX: {fileID: 0}
   city: 0
   forest: 1
   mainMenu: 0
   chatterBar: 0
   disco: 0
+  skate: 0
 --- !u!1 &207176619662470402
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,6 +6599,7 @@ GameObject:
   - component: {fileID: 7604938805305770602}
   - component: {fileID: 7604938805305770603}
   - component: {fileID: 7604938805305770615}
+  - component: {fileID: 7604938805305770616}
   m_Layer: 0
   m_Name: BossClownCanvas
   m_TagString: Untagged
@@ -6706,3 +6709,101 @@ MonoBehaviour:
   textBubbleRoad: {fileID: 7604938804403779296}
   textBubbleOtherside: {fileID: 7604938804690176247}
   bossClownUIAnimator: {fileID: 7604938803558264296}
+  windowsxpSFX: {fileID: 8300000, guid: 0d302df0efa32b146befe8e347818130, type: 3}
+  windowsXP: 1
+--- !u!82 &7604938805305770616
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7604938805305770600}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

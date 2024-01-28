@@ -29,11 +29,9 @@ public class RedLightGreenLightManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A) && isLooking || Input.GetKey(KeyCode.D) && isLooking)
         {
-            playerGO = GameObject.FindGameObjectWithTag("Player");
-            Destroy(playerGO);
-            Instantiate(explotionPrefab, playerGO.transform.position, Quaternion.identity);
-            Instantiate(gameOverScreen, Vector2.zero, Quaternion.identity);
-            
+            //PLAYER DIES HERE (add shooting animation)
+
+            StartCoroutine(KillSequence());
         }
     }
 
@@ -45,5 +43,16 @@ public class RedLightGreenLightManager : MonoBehaviour
         yield return new WaitForSeconds(Random.Range(3 ,5));
         isLooking = false;
         lookGuyAnimator.SetBool("isLooking", isLooking);
+    }
+
+    IEnumerator KillSequence()
+    {
+        lookGuyAnimator.SetBool("kill", true);
+        yield return new WaitForSeconds(1.2f);
+        playerGO = GameObject.FindGameObjectWithTag("Player");
+        Destroy(playerGO);
+        Instantiate(explotionPrefab, playerGO.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+        Instantiate(gameOverScreen, Vector2.zero, Quaternion.identity);
     }
 }

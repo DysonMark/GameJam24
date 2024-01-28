@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonRingBehaviour : MonoBehaviour
-{   
+{
+    [SerializeField] AudioClip pressButtonSFX;
+    AudioSource audioSource;
+
     SpriteRenderer spriteRenderer;
     bool inRangeZ = false;
     bool inRangeX = false;
@@ -16,24 +19,28 @@ public class ButtonRingBehaviour : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z) && inRangeZ)
         {
+            audioSource.PlayOneShot(pressButtonSFX);
             pressedZ = true;
             inRangeZ = false;
             StartCoroutine(GreenEffectFeedback(spriteRenderer));
         }
         if (Input.GetKeyDown(KeyCode.X) && inRangeX)
         {
+            audioSource.PlayOneShot(pressButtonSFX);
             pressedX = true;
             inRangeX = false;
             StartCoroutine(GreenEffectFeedback(spriteRenderer));
         }
         if (Input.GetKeyDown(KeyCode.C) && inRangeC)
         {
+            audioSource.PlayOneShot(pressButtonSFX);
             pressedC = true;
             inRangeC = false;
             StartCoroutine(GreenEffectFeedback(spriteRenderer));
