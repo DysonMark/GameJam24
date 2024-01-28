@@ -10,6 +10,9 @@ public class PlayerSkating : MonoBehaviour
     bool jump = false;
     bool crouch = false;
 
+    AudioSource audioSource;
+    [SerializeField] AudioClip skateJumpSFX;
+
     [SerializeField] public float runSpeed = 40f;       // Run speed multiplier
     [SerializeField] public Animator playerAnimator;    // Reference to the player animator
 
@@ -25,6 +28,7 @@ public class PlayerSkating : MonoBehaviour
     private void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -42,6 +46,7 @@ public class PlayerSkating : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isTouchingGround)
             {
                 player.velocity = new Vector2(player.velocity.x, jumpForce);
+                audioSource.PlayOneShot(skateJumpSFX);
             }
         }
 

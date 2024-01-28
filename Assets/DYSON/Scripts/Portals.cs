@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Portals : MonoBehaviour
 {
-    [SerializeField] Animator transitionAnimator;
+    [SerializeField] GameObject transitionObj;
     [SerializeField] AudioClip portalSFX;
     AudioSource audioSource;
 
@@ -38,7 +38,8 @@ public class Portals : MonoBehaviour
 
     IEnumerator TransitionToNextScene()
     {
-        transitionAnimator.SetBool("Transition", true);
+        GameObject go = Instantiate(transitionObj, GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position, Quaternion.identity);
+        go.GetComponent<Animator>().SetBool("Transition", true);
         audioSource.PlayOneShot(portalSFX);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   

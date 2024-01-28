@@ -4,18 +4,47 @@ using UnityEngine;
 
 public class AudioSourceManager : MonoBehaviour
 {
-    [SerializeField] public AudioClip CityAmbianceSFX, ForestAmbianceSFX, MainMenuSFX, PortalSFX, ChatterInBarSFX;
+    [SerializeField] public AudioClip CityAmbianceSFX, ForestAmbianceSFX, MainMenuSFX, ChatterInBarSFX, discoSFX, skateSFX;
     AudioSource audioSource;
+    public bool city = false;
+    public bool forest = false;
+    public bool mainMenu = false;
+    public bool chatterBar = false;
+    public bool disco = false;
+    public bool skate = false;
 
-        // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audioSource = GetComponent<AudioSource>();
+        if (city)
+        {
+            audioSource.clip = CityAmbianceSFX;
+            audioSource.Play();
+        }
+        if (forest)
+        {
+            audioSource.clip = ForestAmbianceSFX;
+            audioSource.Play();
+        }
+        if (mainMenu)
+        {
+            audioSource.clip = MainMenuSFX;
+            audioSource.Play();
+        }
+        if (chatterBar)
+        {
+            audioSource.clip = ChatterInBarSFX;
+            audioSource.Play();
+        }
+        if (disco)
+        {
+            audioSource.clip = discoSFX;
+            audioSource.Play();
+        }
+        if (skate)
+        {
+            audioSource.clip = skateSFX;
+            audioSource.Play();
+        }
     }
 }

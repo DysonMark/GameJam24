@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c21dde29c4f06f478ff3bc1aa2dc328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionObj: {fileID: 1422926364292942880, guid: a5bd7cbbf84e6754e80ea86518ddd4f5, type: 3}
   portalSFX: {fileID: 8300000, guid: e7abd1c8cba311c4db9f8946a1f16a64, type: 3}
 --- !u!70 &2534282469184872104
 CapsuleCollider2D:
