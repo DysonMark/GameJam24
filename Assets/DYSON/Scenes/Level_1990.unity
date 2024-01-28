@@ -776,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d233649ed6e8e0f45acffd801e331388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverScreen: {fileID: 524136512939413769, guid: d323a648c1ad8484ca20eafe02e3baca, type: 3}
+  gameOverScreen: {fileID: 689714986636889306, guid: 4d24f2387771ce046b80c63d797ed8cd, type: 3}
 --- !u!61 &813033694
 BoxCollider2D:
   m_ObjectHideFlags: 0
