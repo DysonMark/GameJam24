@@ -8,15 +8,11 @@ public class SpawnButtons : MonoBehaviour
     [SerializeField] GameObject[] buttons = new GameObject[3];
     [SerializeField] float spawnIntervals = 5f;
 
-    [SerializeField] GameObject gameWonScreen;
+    [SerializeField] GameObject portal;
+    [SerializeField] Transform portalPos;
 
     float timePassed = 0f;
     float intervalsPassed;
-
-    void Start()
-    {
-        gameWonScreen.SetActive(false);
-    }
 
     void Update()
     {
@@ -31,7 +27,7 @@ public class SpawnButtons : MonoBehaviour
             }
             else
             {
-                gameWonScreen.SetActive(true);
+                Instantiate(portal, portalPos.position, Quaternion.identity);
             }
 
         }
